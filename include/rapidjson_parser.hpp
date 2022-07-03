@@ -324,11 +324,11 @@ struct ObjectParser {
     }
     template <typename __P>
     void insert(key_type&& key, __P&& parser) {
-        value.emplace(key, std::forward<__P>(parser));
+        value.emplace(std::move(key), std::forward<__P>(parser));
     }
     template <typename __P>
     void insert(const key_type& key, __P&& parser) {
-        value.emplace(std::move(key), std::forward<__P>(parser));
+        value.emplace(key, std::forward<__P>(parser));
     }
     void clear() { value.clear(); }
     void reset() { value_type{}.swap(value); }
