@@ -1,0 +1,3 @@
+// the configured options and settings for Tutorial
+#define PARSER_WRAP_VERSION_MAJOR @PARSER_WRAP_VERSION_MAJOR@
+#define PARSER_WRAP_VERSION_MINOR @PARSER_WRAP_VERSION_MINOR@
